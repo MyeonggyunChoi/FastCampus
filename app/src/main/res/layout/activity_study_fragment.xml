@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StudyFragmentActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:name="com.example.fastcampus.FragmentFirst"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/first_fragment" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainer" />
+
+    <TextView
+        android:id="@+id/getFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/todo_searchbox"
+        android:gravity="center"
+        android:text="get"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/removeFragment"
+        app:layout_constraintTop_toBottomOf="@+id/root" />
+
+    <TextView
+        android:id="@+id/removeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/todo_searchbox"
+        android:gravity="center"
+        android:text="remove"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getFragment" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
